@@ -1,0 +1,44 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "rules": {
+        "semi": [
+            "error",
+            "always"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "eol-last": [
+            "error",
+            "always"
+        ],
+        "no-restricted-globals": [
+            "error",
+            {
+                "name": "fdescribe",
+                "message": "Do not commit focused tests, use 'describe' instead"
+            },
+            {
+                "name": "fit",
+                "message": "Do not commit focused tests, use 'it' instead"
+            }
+        ],
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-explicit-any": 0,
+        "@typescript-eslint/no-inferrable-types": [
+            "warn",
+            {
+                "ignoreParameters": true
+            }
+        ],
+        "@typescript-eslint/no-unused-vars": "error"
+    }
+}
